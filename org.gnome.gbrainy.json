@@ -51,7 +51,11 @@
         {
             "name": "mono-runtime",
             "buildsystem": "simple",
-            "build-commands": ["/usr/lib/sdk/mono5/install.sh"]
+            "build-commands": ["/usr/lib/sdk/mono5/install.sh "],
+            "build-options" : {
+                "no-debuginfo": true,
+                "strip": true
+            }
         }
     ]
 }
