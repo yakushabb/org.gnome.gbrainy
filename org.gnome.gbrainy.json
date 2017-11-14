@@ -1,0 +1,55 @@
+{
+    "app-id": "org.gnome.gbrainy",
+    "sdk": "org.gnome.Sdk",
+    "branch": "stable",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "3.26",
+    "command": "gbrainy",
+    "rename-appdata-file": "gbrainy.appdata.xml",
+    "rename-desktop-file": "gbrainy.desktop",
+    "rename-icon": "gbrainy",
+    "sdk-extensions": ["org.freedesktop.Sdk.Extension.mono5"],
+    "finish-args": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=wayland",
+        "--socket=pulseaudio",
+        "--socket=x11"
+    ],
+    "build-options" : {
+        "append-path": "/usr/lib/sdk/mono5/bin",
+        "append-ld-library-path": "/usr/lib/sdk/mono5/lib",
+        "env": {
+            "PKG_CONFIG_PATH": "/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/lib/sdk/mono5/lib/pkgconfig"
+        }
+    },
+    "modules": [
+        {
+            "name": "gtk-sharp3",
+            "config-opts": [
+                           ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/mono/gtk-sharp.git",
+                    "commit": "9ef7d3f394b9d485674c59e92db24ac66fd9f16b"
+                }
+            ]
+        },
+        {
+            "name": "gbrainy",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://gent.softcatala.org/jmas/gbrainy/gbrainy-2.3.3.tar.gz",
+                    "sha256": "0ddf5464dae222ee895f09765066b30d247ff902f43b052cd64078907bde9ffd"
+                }
+            ]
+        },
+        {
+            "name": "mono-runtime",
+            "buildsystem": "simple",
+            "build-commands": ["/usr/lib/sdk/mono5/install.sh"]
+        }
+    ]
+}
