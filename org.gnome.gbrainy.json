@@ -3,7 +3,7 @@
     "sdk": "org.gnome.Sdk",
     "branch": "stable",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.26",
+    "runtime-version": "3.28",
     "command": "gbrainy",
     "rename-appdata-file": "gbrainy.appdata.xml",
     "rename-desktop-file": "gbrainy.desktop",
@@ -43,8 +43,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gent.softcatala.org/jmas/gbrainy/gbrainy-2.3.4.tar.gz",
-                    "sha256": "65469f9076885d106aba4e1df0502c545b15b7d435ed8b9c21c68a5c1852a48e"
+                    "url": "https://gent.softcatala.org/jmas/gbrainy/gbrainy-2.3.5.tar.gz",
+                    "sha256": "30436549849438827dd850fda0bae86ace043faa5d432287b11c90602ef21c0e"
                 }
             ]
         },
