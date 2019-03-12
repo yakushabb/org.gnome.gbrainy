@@ -34,7 +34,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/mono/gtk-sharp.git",
-                    "commit": "9ef7d3f394b9d485674c59e92db24ac66fd9f16b"
+                    "commit": "c1b9bd4214b78dc426bc6e6a07c23a8ab4ab50ea"
                 }
             ]
         },
