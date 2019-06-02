@@ -43,8 +43,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gent.softcatala.org/jmas/gbrainy/gbrainy-2.4.0.tar.gz",
-                    "sha256": "d369847146f6ede22bb2ecd26703fb8df02837893ea241273b2cf2bf3d23156d"
+                    "url": "https://gent.softcatala.org/jmas/gbrainy/gbrainy-2.4.1.tar.gz",
+                    "sha256": "91bec101a9c7b9a9e20f295197d4a2fdba447cecd56fc499fc5fb93ff2161f6b"
                 }
             ]
         },
