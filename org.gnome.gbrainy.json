@@ -1,15 +1,16 @@
 {
     "app-id": "org.gnome.gbrainy",
     "sdk": "org.gnome.Sdk",
-    "branch": "stable",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.36",
+    "runtime-version": "42",
     "command": "gbrainy",
     "rename-appdata-file": "gbrainy.appdata.xml",
     "rename-desktop-file": "gbrainy.desktop",
     "rename-icon": "gbrainy",
     "copy-icon": true,
-    "sdk-extensions": ["org.freedesktop.Sdk.Extension.mono5"],
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.mono6"
+    ],
     "finish-args": [
         "--share=ipc",
         "--share=network",
@@ -17,45 +18,53 @@
         "--socket=pulseaudio",
         "--socket=x11"
     ],
-    "build-options" : {
-        "append-path": "/usr/lib/sdk/mono5/bin",
-        "append-ld-library-path": "/usr/lib/sdk/mono5/lib",
-        "env": {
-            "PKG_CONFIG_PATH": "/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/lib/sdk/mono5/lib/pkgconfig"
-        }
+    "build-options": {
+        "append-path": "/usr/lib/sdk/mono6/bin",
+        "append-ld-library-path": "/usr/lib/sdk/mono6/lib",
+        "append-pkg-config-path": "/usr/lib/sdk/mono6/lib/pkgconfig"
     },
-    "cleanup": [ "/lib/monodoc", "/lib/pkgconfig" ],
+    "cleanup": [
+        "/lib/monodoc",
+        "/lib/pkgconfig"
+    ],
     "modules": [
         {
             "name": "gtk-sharp3",
-            "config-opts": [
-                           ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/mono/gtk-sharp.git",
-                    "commit": "c1b9bd4214b78dc426bc6e6a07c23a8ab4ab50ea"
+                    "commit": "dadc19cf1b90c5743f2776c675faac990e397a56"
                 }
             ]
+        },
+        "shared-modules/intltool/intltool-0.51.json",
+        "shared-modules/libcanberra/libcanberra.json",
+        {
+            "name": "mono",
+            "buildsystem": "simple",
+            "build-commands": [
+                "/usr/lib/sdk/mono6/install.sh"
+            ],
+            "build-options": {
+                "no-debuginfo": true,
+                "strip": true
+            }
         },
         {
             "name": "gbrainy",
             "sources": [
                 {
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 8936,
+                        "url-template": "https://gent.softcatala.org/jmas/gbrainy/gbrainy-$version.tar.gz"
+                    },
                     "type": "archive",
-                    "url": "https://gent.softcatala.org/jmas/gbrainy/gbrainy-2.4.2.tar.gz",
-                    "sha256": "47ebaa7fd58f55a9b10fbfcc25013e82428b292834b862dd3f728ef8feefebf3"
+                    "url": "https://gent.softcatala.org/jmas/gbrainy/gbrainy-2.4.4.tar.gz",
+                    "sha256": "1f67c220dd04c332260d810c25cb94384cca4547bcf933db3997ac69667457e9"
                 }
             ]
-        },
-        {
-            "name": "mono-runtime",
-            "buildsystem": "simple",
-            "build-commands": ["/usr/lib/sdk/mono5/install.sh "],
-            "build-options" : {
-                "no-debuginfo": true,
-                "strip": true
-            }
         }
     ]
 }
