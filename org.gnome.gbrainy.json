@@ -16,7 +16,7 @@
         "--share=network",
         "--socket=wayland",
         "--socket=pulseaudio",
-        "--socket=x11"
+        "--socket=fallback-x11"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/mono6/bin",
