@@ -61,8 +61,8 @@
                         "url-template": "https://gent.softcatala.org/jmas/gbrainy/gbrainy-$version.tar.gz"
                     },
                     "type": "archive",
-                    "url": "https://gent.softcatala.org/jmas/gbrainy/gbrainy-2.4.5.tar.gz",
-                    "sha256": "575207bbdddcdae959efa99e45f27f7d135479e128a7be8cdff3284d361e0b7d"
+                    "url": "https://gent.softcatala.org/jmas/gbrainy/gbrainy-2.4.6.tar.gz",
+                    "sha256": "bc6e94d91e989891c9a8dd6178089aadbb9bc652f519f740fcfa74a50c2085ba"
                 }
             ]
         }
