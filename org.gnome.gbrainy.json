@@ -2,7 +2,7 @@
     "app-id": "org.gnome.gbrainy",
     "sdk": "org.gnome.Sdk",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "42",
+    "runtime-version": "43",
     "command": "gbrainy",
     "rename-appdata-file": "gbrainy.appdata.xml",
     "rename-desktop-file": "gbrainy.desktop",
