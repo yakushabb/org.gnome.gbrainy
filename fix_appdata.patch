@@ -1,0 +1,81 @@
+diff --git a/data/gbrainy.appdata.xml.in b/data/gbrainy.appdata.xml.in
+index fe56ae6..f4ea87d 100644
+--- a/data/gbrainy.appdata.xml.in
++++ b/data/gbrainy.appdata.xml.in
+@@ -5,18 +5,18 @@
+   <launchable type="desktop-id">gbrainy.desktop</launchable>
+   <metadata_license>CC0</metadata_license>
+   <project_license>GPL-2.0+</project_license>
+-  <_summary>gbrainy is a game to train memory, arithmetical, verbal and logical skills.</_summary >
++  <summary>gbrainy is a game to train memory, arithmetical, verbal and logical skills.</summary>
+   <description>
+-    <_p>
++    <p>
+     gbrainy is a game to train memory, arithmetical, verbal and logical skills
+     with many sorts of exercises of different difficulty levels. 
+-    </_p>
+-    <_p>
++    </p>
++    <p>
+     It should have something for all ages and purposes: kids whose parents want 
+     them to develop their capabilities, adults that want to keep their mind in 
+     form or just try it out for fun, older people that might need to do some 
+     memory exercises, etc.
+-    </_p>
++    </p>
+   </description>
+   <releases>
+      <release version="2.4.6" type="stable" date="2023-1-1">
+@@ -39,8 +39,10 @@
+        </description>
+      </release>
+      <release version="2.4.3" type="stable" date="2021-1-1">
++       <description>
+         <p>Updated and fixes in translations</p>
+         <p>Fixes crash</p>
++       </description>
+     </release>
+   </releases>
+  <kudos>
+@@ -54,36 +56,15 @@
+     <control>touch</control>
+   </recommends>
+   <screenshots>
+-    <screenshot height="705" width="632">
++    <screenshot type="default">
+       <image>https://gent.softcatala.org/jmas/gbrainy/gbrainy-screenshot-appdata.png</image>
+    </screenshot>
+   </screenshots>
+   <url type="homepage">https://wiki.gnome.org/Apps/gbrainy</url>
+-  <url type="translate">https://wiki.gnome.org/TranslationProject</url>
++  <url type="vcs-browser">https://gitlab.gnome.org/Archive/gbrainy</url>
+   <update_contact>jmas_at_softcatala_dot_org</update_contact>
+   <project_group>GNOME</project_group>
+   <translation type="gettext">gbrainy</translation>
+   <developer_name>Jordi Mas i Hernàndez</developer_name>
+-  <content_rating type="oars-1.0">
+-    <content_attribute id="violence-cartoon">none</content_attribute>
+-    <content_attribute id="violence-fantasy">none</content_attribute>
+-    <content_attribute id="violence-realistic">none</content_attribute>
+-    <content_attribute id="violence-bloodshed">none</content_attribute>
+-    <content_attribute id="violence-sexual">none</content_attribute>
+-    <content_attribute id="drugs-alcohol">none</content_attribute>
+-    <content_attribute id="drugs-narcotics">none</content_attribute>
+-    <content_attribute id="drugs-tobacco">none</content_attribute>
+-    <content_attribute id="sex-nudity">none</content_attribute>
+-    <content_attribute id="sex-themes">none</content_attribute>
+-    <content_attribute id="language-profanity">none</content_attribute>
+-    <content_attribute id="language-humor">none</content_attribute>
+-    <content_attribute id="language-discrimination">none</content_attribute>
+-    <content_attribute id="social-chat">none</content_attribute>
+-    <content_attribute id="social-info">none</content_attribute>
+-    <content_attribute id="social-audio">none</content_attribute>
+-    <content_attribute id="social-location">none</content_attribute>
+-    <content_attribute id="social-contacts">none</content_attribute>
+-    <content_attribute id="money-purchasing">none</content_attribute>
+-    <content_attribute id="money-gambling">none</content_attribute>
+-  </content_rating>
++  <content_rating type="oars-1.1"/>
+ </component>
+--
+libgit2 1.7.2

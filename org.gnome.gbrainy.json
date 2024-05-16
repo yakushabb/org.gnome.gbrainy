@@ -2,7 +2,7 @@
     "app-id": "org.gnome.gbrainy",
     "sdk": "org.gnome.Sdk",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "43",
+    "runtime-version": "46",
     "command": "gbrainy",
     "rename-appdata-file": "gbrainy.appdata.xml",
     "rename-desktop-file": "gbrainy.desktop",
@@ -55,14 +55,13 @@
             "name": "gbrainy",
             "sources": [
                 {
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 8936,
-                        "url-template": "https://gent.softcatala.org/jmas/gbrainy/gbrainy-$version.tar.gz"
-                    },
                     "type": "archive",
                     "url": "https://gent.softcatala.org/jmas/gbrainy/gbrainy-2.4.6.tar.gz",
                     "sha256": "bc6e94d91e989891c9a8dd6178089aadbb9bc652f519f740fcfa74a50c2085ba"
+                },
+                {
+                    "type": "patch",
+                    "path": "fix_appdata.patch"
                 }
             ]
         }
